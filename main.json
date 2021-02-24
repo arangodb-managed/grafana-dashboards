@@ -16,7 +16,16 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "links": [],
+  "links": [
+    {
+      "icon": "cloud",
+      "tags": [],
+      "title": "ArangoDB Oasis",
+      "tooltip": "ArangoDB Oasis",
+      "type": "link",
+      "url": "https://cloud.arangodb.com"
+    }
+  ],
   "panels": [
     {
       "aliasColors": {},
@@ -799,7 +808,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "ArangoDB scheduler queue length",
+      "title": "Scheduler queue length",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1207,11 +1216,11 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(arangodb_scheduler_jobs_done{namespace=\"depl-$deployment_id\"}[5m])",
+          "expr": "increase(arangodb_scheduler_jobs_done[5m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{pod}}",
+          "legendFormat": "{{server}}",
           "refId": "A"
         }
       ],
@@ -1235,14 +1244,16 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "$$hashKey": "object:2340",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
+          "$$hashKey": "object:2341",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3035,5 +3046,5 @@
   "timezone": "",
   "title": "ArangoDB Oasis Deployment",
   "uid": "lZeHstgZz",
-  "version": 2
+  "version": 4
 }
