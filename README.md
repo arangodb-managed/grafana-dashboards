@@ -7,4 +7,4 @@ deployment.
 
 Copy the content of [main.json](./main.json) into the "Import via panel json" field in Grafana.
 
-![Import via panel json](./screenshots/image.png)
+![](screenshots/image.png?raw=true)
